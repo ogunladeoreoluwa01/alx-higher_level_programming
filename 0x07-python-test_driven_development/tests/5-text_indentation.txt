@@ -1,0 +1,41 @@
+The ``5-text_indentation`` module
+==================================
+Using the ``5-text_indentation`` module
+----------------------------------------
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation("Hello my name is Afam.")
+Hello my name is Afam.
+<BLANKLINE>
+>>> text_indentation("Howdy Neighbour. How have you been doing? I was just going to see some chickens:")
+Howdy Neighbour.
+<BLANKLINE>
+How have you been doing?
+<BLANKLINE>
+I was just going to see some chickens:
+<BLANKLINE>
+
+>>> #Testing with whitespace inside the string
+>>> text_indentation("I am      going to see Burger.")
+I am      going to see Burger.
+<BLANKLINE>
+
+>>> text_indentation("     I am      going to see Burger.")
+I am      going to see Burger.
+<BLANKLINE>
+
+>>> text_indentation("I am      going to see Burger.       Hello there I didn't see you coming")
+I am      going to see Burger.
+<BLANKLINE>
+Hello there I didn't see you coming
+
+>>> text_indentation(["hello", "jow are you"])
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation(6)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation("I am      going to see Burger.Hello there I didn't see you coming")
+I am      going to see Burger.
+<BLANKLINE>
+Hello there I didn't see you coming
